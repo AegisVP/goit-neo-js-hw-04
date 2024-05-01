@@ -12,10 +12,20 @@ const profile = {
   },
 };
 
-console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+const testTask3 = () => {
+  document.getElementById('result').innerHTML = '';
 
-profile.changeUsername('Marco');
-console.log(profile.getInfo()); // "Marco has 300 active hours!"
+  const t1 = profile.getInfo(); // "Jacob has 300 active hours!"
+  console.log(t1);
+  logWindow.log(t1);
 
-profile.updatePlayTime(20);
-console.log(profile.getInfo()); // "Marco has 320 active hours!"
+  profile.changeUsername('Marco');
+  const t2 = profile.getInfo(); // "Marco has 300 active hours!"
+  console.log(t2);
+  logWindow.log(t2);
+
+  profile.updatePlayTime(20);
+  const t3 = profile.getInfo(); // "Marco has 320 active hours!"
+  console.log(t3);
+  logWindow.log(t3);
+};
